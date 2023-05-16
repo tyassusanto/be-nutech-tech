@@ -134,7 +134,7 @@ const deteleProduct = async (req, res, next) => {
         const id = req.params.id;
 
         const result = await modelProduct.deleteProduct(id);
-        commonHelper.response(res, result, 200, `User id : ${id}, Deleted !`)
+        commonHelper.response(res, result, 200, `Product id : ${id}, Deleted !`)
     } catch (error) {
         console.log(error, 'error post')
         res.status(500),
